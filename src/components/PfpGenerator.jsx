@@ -81,7 +81,6 @@ Clothing: [
         { id: 'c_polo_gucci', name: 'Gucci Polo', url: '/images/clothing/c_polo_gucci.png' },
         { id: 'c_parka', name: 'Soviet Parka', url: '/images/clothing/c_parka.png' },
         { id: 'c_camo', name: 'Camo Uniform', url: '/images/clothing/c_camo.png' },
-        { id: 'c_nike', name: 'Nike Pullover', url: '/images/clothing/c_nike.png' },
         { id: 'c_camo_vest', name: 'Tactical Vest', url: '/images/clothing/c_camo_vest.png' },
         { id: 'c_polo_black', name: 'Black Polo', url: '/images/clothing/c_polo_black.png' },
         { id: 'c_robe', name: 'Royal Robe', url: '/images/clothing/c_robe.png' },
