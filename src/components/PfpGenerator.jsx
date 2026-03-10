@@ -142,7 +142,7 @@ const PfpGenerator = () => {
         // Order matters! Background -> Base Cat -> Clothing -> Headwear -> Glasses -> Accessories (Always Front)
         const layersToDraw = [
             selections.Background?.url,
-            '/assets/base-cat.png',
+            '/images/base-cat.png',
             selections.Clothing?.url,
             selections.Headwear?.url,
             selections.Glasses?.url,
@@ -210,7 +210,7 @@ const PfpGenerator = () => {
                 <div className="preview-container dark-card">
                     <div className={`canvas-wrapper ${!selections.Background?.url ? 'bg-white' : ''}`}>
                         {/* Base Layer */}
-                        <img src="/assets/base-cat.png" alt="Base Cat" className="layer-img base-layer" />
+                        <img src="/images/base-cat.png" alt="Base Cat" className="layer-img base-layer" />
 
                         {/* Accessory Layers */}
                         {/* Ensure Accessories are drawn last so they appear on very top */}
