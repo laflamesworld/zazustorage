@@ -265,11 +265,14 @@ const PfpGenerator = () => {
                             >
 <div className={`item-thumbnail ${activeCategory === 'Background' ? 'bg-thumbnail' : ''}`}>
                                     {item.url ? (
-                                        <img src={item.url} alt={item.name} />
+                                        <img src={item.url} alt="" />
                                     ) : (
                                         <div className="none-placeholder">X</div>
                                     )}
                                 </div>
+                                {item.name !== 'None' && (
+                                    <span className={`item-name ${activeCategory === 'Background' ? 'bg-name' : ''}`}>{item.name}</span>
+                                )}
                             </button>
                         ))}
                     </div>
