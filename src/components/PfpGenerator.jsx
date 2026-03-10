@@ -161,6 +161,10 @@ const PfpGenerator = () => {
         };
 
         try {
+            // Fill with dark background first to avoid white edges on any images
+            ctx.fillStyle = '#0f172a';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
             for (const url of layersToDraw) {
                 const img = await loadImage(url);
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
