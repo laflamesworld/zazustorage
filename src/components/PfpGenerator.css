@@ -64,8 +64,8 @@
     margin-bottom: 2rem;
 }
 
-.canvas-wrapper.bg-white {
-    background: #ffffff;
+.canvas-wrapper.bg-default {
+    background: #0f172a;
     box-shadow: none;
 }
 

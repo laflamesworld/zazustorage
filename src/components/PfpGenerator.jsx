@@ -149,9 +149,9 @@ const PfpGenerator = () => {
         };
 
         try {
-            // Give it a solid background dark fill just in case they don't have a background set
+// Give it a solid background dark fill just in case they don't have a background set
             if (!selections.Background?.url) {
-                ctx.fillStyle = '#ffffff';
+                ctx.fillStyle = '#0f172a';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
             }
 
@@ -197,7 +197,7 @@ const PfpGenerator = () => {
 
                 {/* Left Side: Preview Canvas */}
                 <div className="preview-container dark-card">
-                    <div className={`canvas-wrapper ${!selections.Background?.url ? 'bg-white' : ''}`}>
+                    <div className={`canvas-wrapper ${!selections.Background?.url ? 'bg-default' : ''}`}>
                         {/* Base Layer */}
                         <img src="/images/base-cat.png" alt="Base Cat" className="layer-img base-layer" />
 
