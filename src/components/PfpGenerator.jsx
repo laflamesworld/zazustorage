@@ -6,29 +6,18 @@ const CATEGORIES = ['Background', 'Headwear', 'Glasses', 'Clothing', 'Accessorie
 
 const ASSETS = {
     Background: [
-        { id: 'bg_none', name: 'None', url: '/assets/bg_none_color.png' },
-        { id: 'bg_kobe', name: 'Trophies', url: '/assets/bg_kobe.png' },
-        { id: 'bg_scream', name: 'The Scream', url: '/assets/bg_scream.png' },
-        { id: 'bg_street', name: 'The Hood', url: '/assets/bg_street.png' },
-        { id: 'bg_creation', name: 'Creation of Adam', url: '/assets/bg_creation.png' },
-        { id: 'bg_legends', name: 'Legends', url: '/assets/bg_legends.png' },
-        { id: 'bg_battlefield', name: 'Battlefield', url: '/assets/bg_battlefield.png' },
-        { id: 'bg_heat_dunk', name: 'The Dunk', url: '/assets/bg_heat_dunk.png' },
-        { id: 'bg_oblock', name: 'O Block', url: '/assets/bg_oblock.png' },
-        { id: 'bg_rage_quit', name: 'Crash Out', url: '/assets/bg_rage_quit.png' },
-        { id: 'bg_nighthawks', name: 'Nighthawks', url: '/assets/bg_nighthawks.png' },
-        { id: 'bg_wolf', name: 'Wolf of Wall St', url: '/assets/bg_wolf.png' },
-        { id: 'bg_cat_mafia', name: 'Cat Mafia', url: '/assets/bg_cat_mafia.png' },
-        { id: 'bg_iverson', name: 'Step Over', url: '/assets/bg_iverson.png' },
-        { id: 'bg_cafe', name: 'Cafe Terrace', url: '/assets/bg_cafe.png' },
-        { id: 'bg_trading_floor', name: 'Trading Floor', url: '/assets/bg_trading_floor.png' },
-        { id: 'bg_trenches', name: 'The Trenches', url: '/assets/bg_trenches.png' },
-        { id: 'bg_nyse', name: 'NYSE', url: '/assets/bg_nyse.png' },
-        { id: 'bg_nuke', name: 'Nuke', url: '/assets/bg_nuke.png' },
-        { id: 'bg_favela', name: 'Favela', url: '/assets/bg_favela.png' },
-        { id: 'bg_stealth', name: 'Stealth Bombers', url: '/assets/bg_stealth.png' },
-        { id: 'bg_wtc', name: 'WTC', url: '/assets/bg_wtc.png' },
-        { id: 'bg_desert', name: 'Desert Tactics', url: '/assets/bg_desert.png' },
+        { id: 'bg_none', name: 'None', url: '' },
+        { id: 'bg_battlefield', name: 'Battlefield', url: '/images/backgrounds/bg_battlefield.png' },
+        { id: 'bg_iverson', name: 'Step Over', url: '/images/backgrounds/bg_iverson.png' },
+        { id: 'bg_basketball', name: 'Basketball', url: '/images/backgrounds/bg_basketball.png' },
+        { id: 'bg_favela', name: 'Favela', url: '/images/backgrounds/bg_favela.png' },
+        { id: 'bg_cat_mafia', name: 'Cat Mafia', url: '/images/backgrounds/bg_cat_mafia.png' },
+        { id: 'bg_desert', name: 'Desert Tactics', url: '/images/backgrounds/bg_desert.png' },
+        { id: 'bg_creation', name: 'Creation of Adam', url: '/images/backgrounds/bg_creation.png' },
+        { id: 'bg_kobe', name: 'Trophies', url: '/images/backgrounds/bg_kobe.png' },
+        { id: 'bg_heat_dunk', name: 'The Dunk', url: '/images/backgrounds/bg_heat_dunk.png' },
+        { id: 'bg_cafe', name: 'Cafe Terrace', url: '/images/backgrounds/bg_cafe.png' },
+        { id: 'bg_legends', name: 'Legends', url: '/images/backgrounds/bg_legends.png' },
     ],
     Headwear: [
         { id: 'h_none', name: 'None', url: '' },
@@ -267,7 +256,9 @@ const PfpGenerator = () => {
                                         <div className="none-placeholder">X</div>
                                     )}
                                 </div>
-                                <span className={`item-name ${activeCategory === 'Background' ? 'bg-name' : ''}`}>{item.name}</span>
+                                {item.name !== 'None' && (
+                                    <span className={`item-name ${activeCategory === 'Background' ? 'bg-name' : ''}`}>{item.name}</span>
+                                )}
                             </button>
                         ))}
                     </div>
