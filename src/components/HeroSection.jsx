@@ -16,6 +16,9 @@ const HeroSection = () => {
 return (
         <section className="hero-section">
             <div className="hero-content">
+                <div className="hero-title-wrapper">
+                    <h1 className="hero-title">Zazu</h1>
+                </div>
                 <p className="hero-description">
                     $zazu the cat in the trenches.
                 </p>
