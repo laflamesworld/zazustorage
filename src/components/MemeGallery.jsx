@@ -35,6 +35,11 @@ const ZAZU_MEMES = [
     { id: 30, url: '/images/memes/meme_nerd.png', title: 'Nerd' },
     { id: 31, url: '/images/memes/meme_skater.jpg', title: 'Skater' },
     { id: 32, url: '/images/memes/meme_spring.png', title: 'Spring Cat' },
+    { id: 33, url: '/images/memes/meme_wizard.jpg', title: 'Wizard' },
+    { id: 34, url: '/images/memes/meme_trench.png', title: 'Trench Warfare' },
+    { id: 35, url: '/images/memes/meme_un.jpg', title: 'UN Peacekeeper' },
+    { id: 36, url: '/images/memes/meme_warbn.jpg', title: 'Cool Cats Dont Look' },
+    { id: 37, url: '/images/memes/meme_thumbsup.png', title: 'Thumbs Up' },
 ];
 
 const MemeGallery = () => {
