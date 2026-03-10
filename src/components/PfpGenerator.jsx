@@ -6,7 +6,7 @@ const CATEGORIES = ['Background', 'Headwear', 'Glasses', 'Clothing', 'Accessorie
 
 const ASSETS = {
     Background: [
-        { id: 'bg_none', name: 'None', url: '' },
+        { id: 'bg_none', name: 'None', url: '/images/backgrounds/bg_none_color.png' },
         { id: 'bg_battlefield', name: 'Battlefield', url: '/images/backgrounds/bg_battlefield.png' },
         { id: 'bg_iverson', name: 'Step Over', url: '/images/backgrounds/bg_iverson.png' },
         { id: 'bg_basketball', name: 'Basketball', url: '/images/backgrounds/bg_basketball.png' },
@@ -161,12 +161,6 @@ const PfpGenerator = () => {
         };
 
         try {
-// Give it a solid background dark fill just in case they don't have a background set
-            if (!selections.Background?.url) {
-                ctx.fillStyle = '#0f172a';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-            }
-
             for (const url of layersToDraw) {
                 const img = await loadImage(url);
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -209,7 +203,7 @@ const PfpGenerator = () => {
 
                 {/* Left Side: Preview Canvas */}
                 <div className="preview-container dark-card">
-                    <div className={`canvas-wrapper ${!selections.Background?.url ? 'bg-default' : ''}`}>
+                    <div className="canvas-wrapper">
                         {/* Base Layer */}
                         <img src="/images/base-cat.png" alt="Base Cat" className="layer-img base-layer" />
 
