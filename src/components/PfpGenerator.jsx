@@ -108,6 +108,14 @@ Accessories: [
         { id: 'a_flail', name: 'Flail', url: '/images/accessories/a_flail.png' },
         { id: 'a_mace', name: 'Mace', url: '/images/accessories/a_mace.png' },
         { id: 'a_nunchucks', name: 'Nunchucks', url: '/images/accessories/a_nunchucks.png' },
+        { id: 'a_shuriken', name: 'Shuriken', url: '/images/accessories/a_shuriken.png' },
+        { id: 'a_sniper', name: 'Barrett Sniper', url: '/images/accessories/a_sniper.png' },
+        { id: 'a_watch_rainbow', name: 'Rainbow Patek', url: '/images/accessories/a_watch_rainbow.png' },
+        { id: 'a_watch_digital', name: 'Diamond G-Shock', url: '/images/accessories/a_watch_digital.png' },
+        { id: 'a_watch_silver', name: 'Iced Patek', url: '/images/accessories/a_watch_silver.png' },
+        { id: 'a_watch_gold', name: 'Gold Tourbillon', url: '/images/accessories/a_watch_gold.png' },
+        { id: 'a_watch_emerald', name: 'Rainbow Rolex', url: '/images/accessories/a_watch_emerald.png' },
+        { id: 'a_trench_map', name: 'Trench Map', url: '/images/accessories/a_trench_map.png' },
     ]
 };
 
