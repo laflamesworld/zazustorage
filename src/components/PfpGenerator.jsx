@@ -54,7 +54,6 @@ Headwear: [
         { id: 'h_keffiyeh', name: 'Keffiyeh', url: '/images/headwear/h_keffiyeh.png' },
         { id: 'h_tophat', name: 'Top Hat', url: '/images/headwear/h_tophat.png' },
         { id: 'h_fedora', name: 'Fedora', url: '/images/headwear/h_fedora.png' },
-        { id: 'h_hood', name: 'Hood', url: '/images/headwear/h_hood.png' },
     ],
 Glasses: [
         { id: 'g_none', name: 'None', url: '' },
