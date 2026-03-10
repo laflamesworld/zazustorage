@@ -122,7 +122,6 @@ Accessories: [
 const PfpGenerator = () => {
     const [activeCategory, setActiveCategory] = useState(CATEGORIES[0]);
     const [isDownloading, setIsDownloading] = useState(false);
-    const [imagesLoaded, setImagesLoaded] = useState(false);
     const [selections, setSelections] = useState({
         Background: ASSETS.Background[0],
         Headwear: ASSETS.Headwear[0],
@@ -130,36 +129,6 @@ const PfpGenerator = () => {
         Clothing: ASSETS.Clothing[0],
         Accessories: ASSETS.Accessories[0]
     });
-
-    // Preload all images on mount
-    React.useEffect(() => {
-        const imagesToPreload = [
-            '/images/base-cat.png',
-            ...Object.values(ASSETS).flatMap(category => 
-                category.filter(item => item.url).map(item => item.url)
-            )
-        ];
-        
-        let loadedCount = 0;
-        const totalImages = imagesToPreload.length;
-        
-        imagesToPreload.forEach(src => {
-            const img = new Image();
-            img.onload = () => {
-                loadedCount++;
-                if (loadedCount === totalImages) {
-                    setImagesLoaded(true);
-                }
-            };
-            img.onerror = () => {
-                loadedCount++;
-                if (loadedCount === totalImages) {
-                    setImagesLoaded(true);
-                }
-            };
-            img.src = src;
-        });
-    }, []);
 
     const handleSelect = (category, item) => {
         setSelections(prev => ({
@@ -243,28 +212,24 @@ const PfpGenerator = () => {
                 {/* Left Side: Preview Canvas */}
                 <div className="preview-container dark-card">
 <div className="canvas-wrapper">
-                        {imagesLoaded && (
-                            <>
-                                {/* Base Layer */}
-                                <img src="/images/base-cat.png" alt="" className="layer-img base-layer" />
+                        {/* Base Layer */}
+                        <img src="/images/base-cat.png" alt="" className="layer-img base-layer" />
 
-                                {/* Accessory Layers */}
-                                {/* Ensure Accessories are drawn last so they appear on very top */}
-                                {['Background', 'Clothing', 'Headwear', 'Glasses', 'Accessories'].map(cat => {
-                                    const item = selections[cat];
-                                    if (!item || !item.url) return null;
+                        {/* Accessory Layers */}
+                        {/* Ensure Accessories are drawn last so they appear on very top */}
+                        {['Background', 'Clothing', 'Headwear', 'Glasses', 'Accessories'].map(cat => {
+                            const item = selections[cat];
+                            if (!item || !item.url) return null;
 
-                                    return (
-                                        <img
-                                            key={cat}
-                                            src={item.url}
-                                            alt=""
-                                            className={`layer-img layer-${cat.toLowerCase()}`}
-                                        />
-                                    );
-                                })}
-                            </>
-                        )}
+                            return (
+                                <img
+                                    key={cat}
+                                    src={item.url}
+                                    alt=""
+                                    className={`layer-img layer-${cat.toLowerCase()}`}
+                                />
+                            );
+                        })}
                     </div>
 
                     <div className="preview-actions">
