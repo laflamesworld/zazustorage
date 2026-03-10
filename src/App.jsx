@@ -12,7 +12,7 @@ function App() {
       <nav className="navbar" id="home">
         <div className="nav-left">
           <div className="nav-logo-glow">
-            <img src="/assets/logo.png" alt="Cat Logo" />
+            <img src="/images/logo.png" alt="Zazu Logo" />
           </div>
           <div className="nav-links">
             <a href="#home">Home</a>
