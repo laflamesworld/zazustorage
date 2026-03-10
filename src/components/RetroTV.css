@@ -1,0 +1,118 @@
+.retro-tv-real-wrapper {
+    position: relative;
+    width: 600px;
+    /* Scaled up for better detail on the real TV */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    max-width: 100%;
+}
+
+.retro-tv-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    z-index: 1;
+    /* TV goes on top */
+    pointer-events: none;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.9));
+}
+
+.retro-tv-real-screen {
+    position: absolute;
+    /* Estimated placement to overlap the screen of a generated TV */
+    /* Since it uses mix-blend-mode: screen, we can afford overlap on pure black */
+    top: 15%;
+    left: 10%;
+    width: 75%;
+    height: 70%;
+    background: transparent;
+    z-index: 2;
+    /* Screen layer goes strictly inside or blended on top */
+    overflow: hidden;
+    border-radius: 8% / 10%;
+}
+
+.retro-tv-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: screen;
+    /* Blends purely with the pitch black glass of the image */
+    filter: contrast(1.1) brightness(0.9) saturate(1.2);
+    opacity: 0.95;
+}
+
+.retro-tv-no-signal {
+    color: lime;
+    font-family: monospace;
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    mix-blend-mode: screen;
+}
+
+/* Glass glare over screen */
+.retro-tv-glare {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom right,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.02) 40%,
+            transparent 50%,
+            transparent 100%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* scanlines */
+.retro-tv-scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(to bottom,
+            transparent 0,
+            transparent 2px,
+            rgba(0, 0, 0, 0.2) 3px,
+            rgba(0, 0, 0, 0.2) 4px);
+    z-index: 11;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+/* static noise overlay */
+.retro-tv-noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.15;
+    z-index: 12;
+    pointer-events: none;
+    animation: noiseAnim 0.2s infinite linear;
+}
+
+@keyframes noiseAnim {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100px 100px;
+    }
+}

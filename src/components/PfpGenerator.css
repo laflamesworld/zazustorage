@@ -1,0 +1,322 @@
+.generator-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.title-gradient {
+    font-size: 3rem;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.generator-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* Base card styling inside glass panel */
+.dark-card {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+}
+
+/* ================= Preview Container ================= */
+.preview-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.canvas-wrapper {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%), var(--bg-dark);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.canvas-wrapper.bg-white {
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.layer-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    /* Let clicks pass through */
+}
+
+/* Z-index layering */
+.layer-background {
+    z-index: 0;
+    object-fit: cover;
+}
+
+.base-layer {
+    z-index: 1;
+}
+
+.layer-clothing {
+    z-index: 2;
+}
+
+.layer-accessories {
+    z-index: 3;
+}
+
+.layer-headwear {
+    z-index: 4;
+}
+
+.layer-glasses {
+    z-index: 5;
+}
+
+.preview-actions {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.btn-primary,
+.btn-secondary {
+    flex: 1;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4b5563, #1f2937);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ================= Config Container ================= */
+.config-container {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+}
+
+.tab-btn {
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-weight: 600;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.tab-btn:hover {
+    color: var(--text-main);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #4b5563, #1f2937);
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    overflow-y: auto;
+    max-height: 437px;
+    padding-right: 0.5rem;
+}
+
+/* Custom Scrollbar for Items Grid */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.item-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-sm);
+    padding: 0.8rem;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+    height: 140px;
+}
+
+.item-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s;
+}
+
+.item-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.item-card.selected {
+    background: rgba(75, 85, 99, 0.3);
+}
+
+.item-card.selected::after {
+    border-color: #9ca3af;
+}
+
+.item-thumbnail {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.item-thumbnail.bg-thumbnail {
+    background: transparent;
+    border-radius: var(--radius-sm);
+    padding: 0;
+}
+
+.item-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.item-thumbnail.bg-thumbnail img {
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+
+.none-placeholder {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+}
+
+.item-name {
+    font-size: 0.8rem;
+    color: var(--text-main);
+    text-align: center;
+    font-family: var(--font-body);
+}
+
+.item-name.bg-name {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .generator-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .canvas-wrapper {
+        width: 300px;
+        height: 300px;
+    }
+
+    .category-tabs {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .tab-btn {
+        flex: 1;
+        text-align: center;
+        min-width: calc(50% - 0.5rem);
+    }
+}

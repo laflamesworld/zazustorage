@@ -1,0 +1,36 @@
+const fs = require('fs');
+const path = require('path');
+
+function walk(dir) {
+    let results = [];
+    const list = fs.readdirSync(dir);
+    list.forEach(file => {
+        file = path.join(dir, file);
+        const stat = fs.statSync(file);
+        if (stat && stat.isDirectory()) {
+            results = results.concat(walk(file));
+        } else {
+            if (file.endsWith('.css')) results.push(file);
+        }
+    });
+    return results;
+}
+
+const cssFiles = walk('c:/Users/mikaz/.gemini/antigravity/playground/azure-gravity/trenchcat-web/src');
+
+cssFiles.forEach(file => {
+    let content = fs.readFileSync(file, 'utf8');
+    const isMain = file.includes('HeroSection.css') || file.includes('App.css') || file.includes('index.css');
+    const divisor = isMain ? 2 : 3;
+
+    let newContent = content.replace(/font-size:\s*([0-9.]+)rem/g, (match, p1) => {
+        let val = parseFloat(p1) / divisor;
+        val = Math.round(val * 1000) / 1000;
+        return `font-size: ${val}rem`;
+    });
+
+    if (newContent !== content) {
+        fs.writeFileSync(file, newContent);
+        console.log(`Reverted font sizes in ${file}`);
+    }
+});
