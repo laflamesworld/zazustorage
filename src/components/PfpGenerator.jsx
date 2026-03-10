@@ -6,111 +6,116 @@ const CATEGORIES = ['Background', 'Headwear', 'Glasses', 'Clothing', 'Accessorie
 
 const ASSETS = {
     Background: [
-        { id: 'bg_none', name: 'None', url: '/assets/bg_none_color.png' },
-        { id: 'bg_kobe', name: 'Trophies', url: '/assets/bg_kobe.png' },
-        { id: 'bg_scream', name: 'The Scream', url: '/assets/bg_scream.png' },
-        { id: 'bg_street', name: 'The Hood', url: '/assets/bg_street.png' },
-        { id: 'bg_creation', name: 'Creation of Adam', url: '/assets/bg_creation.png' },
-        { id: 'bg_legends', name: 'Legends', url: '/assets/bg_legends.png' },
-        { id: 'bg_battlefield', name: 'Battlefield', url: '/assets/bg_battlefield.png' },
-        { id: 'bg_heat_dunk', name: 'The Dunk', url: '/assets/bg_heat_dunk.png' },
-        { id: 'bg_oblock', name: 'O Block', url: '/assets/bg_oblock.png' },
-        { id: 'bg_rage_quit', name: 'Crash Out', url: '/assets/bg_rage_quit.png' },
-        { id: 'bg_nighthawks', name: 'Nighthawks', url: '/assets/bg_nighthawks.png' },
-        { id: 'bg_wolf', name: 'Wolf of Wall St', url: '/assets/bg_wolf.png' },
-        { id: 'bg_cat_mafia', name: 'Cat Mafia', url: '/assets/bg_cat_mafia.png' },
-        { id: 'bg_iverson', name: 'Step Over', url: '/assets/bg_iverson.png' },
-        { id: 'bg_cafe', name: 'Cafe Terrace', url: '/assets/bg_cafe.png' },
-        { id: 'bg_trading_floor', name: 'Trading Floor', url: '/assets/bg_trading_floor.png' },
-        { id: 'bg_trenches', name: 'The Trenches', url: '/assets/bg_trenches.png' },
-        { id: 'bg_nyse', name: 'NYSE', url: '/assets/bg_nyse.png' },
-        { id: 'bg_nuke', name: 'Nuke', url: '/assets/bg_nuke.png' },
-        { id: 'bg_favela', name: 'Favela', url: '/assets/bg_favela.png' },
-        { id: 'bg_stealth', name: 'Stealth Bombers', url: '/assets/bg_stealth.png' },
-        { id: 'bg_wtc', name: 'WTC', url: '/assets/bg_wtc.png' },
-        { id: 'bg_desert', name: 'Desert Tactics', url: '/assets/bg_desert.png' },
+        { id: 'bg_none', name: 'None', url: '/images/backgrounds/bg_none_color.png' },
+        { id: 'bg_battlefield', name: 'Battlefield', url: '/images/backgrounds/bg_battlefield.png' },
+        { id: 'bg_iverson', name: 'Step Over', url: '/images/backgrounds/bg_iverson.png' },
+        { id: 'bg_basketball', name: 'The Dunk', url: '/images/backgrounds/bg_basketball.png' },
+        { id: 'bg_favela', name: 'Favela', url: '/images/backgrounds/bg_favela.png' },
+        { id: 'bg_cat_mafia', name: 'Cat Mafia', url: '/images/backgrounds/bg_cat_mafia.png' },
+        { id: 'bg_desert', name: 'Desert Tactics', url: '/images/backgrounds/bg_desert.png' },
+        { id: 'bg_creation', name: 'Creation of Adam', url: '/images/backgrounds/bg_creation.png' },
+        { id: 'bg_kobe', name: 'Trophies', url: '/images/backgrounds/bg_kobe.png' },
+        { id: 'bg_cafe', name: 'Cafe Terrace', url: '/images/backgrounds/bg_cafe.png' },
+        { id: 'bg_legends', name: 'Legends', url: '/images/backgrounds/bg_legends.png' },
+        { id: 'bg_trenches', name: 'The Trenches', url: '/images/backgrounds/bg_trenches.png' },
+        { id: 'bg_nighthawks', name: 'Nighthawks', url: '/images/backgrounds/bg_nighthawks.png' },
+        { id: 'bg_wtc', name: 'WTC', url: '/images/backgrounds/bg_wtc.png' },
+        { id: 'bg_oblock', name: 'O Block', url: '/images/backgrounds/bg_oblock.png' },
+        { id: 'bg_rage_quit', name: 'Crash Out', url: '/images/backgrounds/bg_rage_quit.png' },
+        { id: 'bg_nuke', name: 'Nuke', url: '/images/backgrounds/bg_nuke.png' },
+        { id: 'bg_scream', name: 'The Scream', url: '/images/backgrounds/bg_scream.png' },
+        { id: 'bg_street', name: 'The Hood', url: '/images/backgrounds/bg_street.png' },
+        { id: 'bg_nyse', name: 'NYSE', url: '/images/backgrounds/bg_nyse.png' },
+        { id: 'bg_wolf', name: 'Wolf of Wall St', url: '/images/backgrounds/bg_wolf.png' },
+        { id: 'bg_stealth', name: 'Stealth Bombers', url: '/images/backgrounds/bg_stealth.png' },
+        { id: 'bg_trading_floor', name: 'Trading Floor', url: '/images/backgrounds/bg_trading_floor.png' },
     ],
-    Headwear: [
+Headwear: [
         { id: 'h_none', name: 'None', url: '' },
-        { id: 'h_helmet', name: 'Army Helmet', url: '/assets/h_helmet.png' },
-        { id: 'h_beret', name: 'Commander Beret', url: '/assets/h_beret.png' },
-        { id: 'h_ny', name: 'NY Hat', url: '/assets/h_ny.png' },
-        { id: 'h_la', name: 'LA Hat', url: '/assets/h_la.png' },
-        { id: 'h_bulls', name: 'Bulls Hat', url: '/assets/h_bulls.png' },
-        { id: 'h_heat', name: 'Heat Hat', url: '/assets/h_heat.png' },
-        { id: 'h_crown', name: 'Crown', url: '/assets/h_crown.png' },
-        { id: 'h_knight', name: 'Knight Helmet', url: '/assets/h_knight.png' },
-        { id: 'h_ushanka', name: 'Ushanka', url: '/assets/h_ushanka.png' },
-        { id: 'h_bandana', name: 'Red Bandana', url: '/assets/h_bandana.png' },
-        { id: 'h_viking', name: 'Viking Helmet', url: '/assets/h_viking.png' },
-        { id: 'h_cowboy', name: 'Cowboy Hat', url: '/assets/h_cowboy.png' },
-        { id: 'h_pharaoh', name: 'Pharaoh', url: '/assets/h_pharaoh.png' },
-        { id: 'h_donttread', name: 'Don\'t Tread', url: '/assets/h_donttread.png' },
-        { id: 'h_blackhelm', name: 'Black Helm', url: '/assets/h_blackhelm.png' },
-        { id: 'h_camo', name: 'Camo Hat', url: '/assets/h_camo.png' },
-        { id: 'h_bluecap', name: 'Blue Cap', url: '/assets/h_bluecap.png' },
-        { id: 'h_snapback', name: 'Snapback', url: '/assets/h_snapback.png' },
-        { id: 'h_propeller', name: 'Propeller Hat', url: '/assets/h_propeller.png' },
-        { id: 'h_keffiyeh', name: 'Keffiyeh', url: '/assets/h_keffiyeh.png' },
-        { id: 'h_tophat', name: 'Top Hat', url: '/assets/h_tophat.png' },
-        { id: 'h_fedora', name: 'Fedora', url: '/assets/h_fedora.png' },
+        { id: 'h_helmet', name: 'Army Helmet', url: '/images/headwear/h_helmet.png' },
+        { id: 'h_beret', name: 'Beret', url: '/images/headwear/h_beret.png' },
+        { id: 'h_ny', name: 'NY Hat', url: '/images/headwear/h_ny.png' },
+        { id: 'h_la', name: 'LA Hat', url: '/images/headwear/h_la.png' },
+        { id: 'h_bulls', name: 'Bulls Hat', url: '/images/headwear/h_bulls.png' },
+        { id: 'h_heat', name: 'Heat Hat', url: '/images/headwear/h_heat.png' },
+        { id: 'h_crown', name: 'Crown', url: '/images/headwear/h_crown.png' },
+        { id: 'h_knight', name: 'Knight Helmet', url: '/images/headwear/h_knight.png' },
+        { id: 'h_ushanka', name: 'Ushanka', url: '/images/headwear/h_ushanka.png' },
+        { id: 'h_bandana', name: 'Red Bandana', url: '/images/headwear/h_bandana.png' },
+        { id: 'h_viking', name: 'Viking Helmet', url: '/images/headwear/h_viking.png' },
+        { id: 'h_cowboy', name: 'Cowboy Hat', url: '/images/headwear/h_cowboy.png' },
+        { id: 'h_pharaoh', name: 'Pharaoh', url: '/images/headwear/h_pharaoh.png' },
+        { id: 'h_donttread', name: 'Don\'t Tread', url: '/images/headwear/h_donttread.png' },
+        { id: 'h_blackhelm', name: 'Black Helm', url: '/images/headwear/h_blackhelm.png' },
+        { id: 'h_camo', name: 'Camo Hat', url: '/images/headwear/h_camo.png' },
+        { id: 'h_bluecap', name: 'Blue Cap', url: '/images/headwear/h_bluecap.png' },
+        { id: 'h_snapback', name: 'Snapback', url: '/images/headwear/h_snapback.png' },
+        { id: 'h_propeller', name: 'Propeller Hat', url: '/images/headwear/h_propeller.png' },
+        { id: 'h_keffiyeh', name: 'Keffiyeh', url: '/images/headwear/h_keffiyeh.png' },
+        { id: 'h_tophat', name: 'Top Hat', url: '/images/headwear/h_tophat.png' },
+        { id: 'h_fedora', name: 'Fedora', url: '/images/headwear/h_fedora.png' },
     ],
-    Glasses: [
+Glasses: [
         { id: 'g_none', name: 'None', url: '' },
-        { id: 'g_aviators', name: 'Aviators', url: '/assets/g_aviators.png' },
-        { id: 'g_moggles', name: 'Moggles', url: '/assets/g_moggles.png' },
-        { id: 'g_circular', name: 'Circular Glasses', url: '/assets/g_circular.png' },
-        { id: 'g_goggles', name: 'Snow Goggles', url: '/assets/g_goggles.png' },
-        { id: 'g_maybach', name: 'Maybach Shades', url: '/assets/g_maybach.png' },
-        { id: 'g_lv', name: 'LV Shades', url: '/assets/g_lv.png' },
-        { id: 'g_laser', name: 'Laser Eyes', url: '/assets/g_laser.png' },
-        { id: 'g_speed', name: 'Speed Shades', url: '/assets/g_speed.png' },
-        { id: 'g_wayfarers', name: 'Wayfarers', url: '/assets/g_wayfarers.png' },
-        { id: 'g_pitvipers', name: 'Pit Vipers', url: '/assets/g_pitvipers.png' },
-        { id: 'g_wire', name: 'Wire Frames', url: '/assets/g_wire.png' },
-        { id: 'g_visor', name: 'Cyber Visor', url: '/assets/g_visor.png' },
-        { id: 'g_steampunk', name: 'Plastic Goggles', url: '/assets/g_steampunk.png' },
+        { id: 'g_circular', name: 'Circular', url: '/images/glasses/g_circular.png' },
+        { id: 'g_steampunk', name: 'Tiger Goggles', url: '/images/glasses/g_steampunk.png' },
+        { id: 'g_aviators', name: 'Aviators', url: '/images/glasses/g_aviators.png' },
+        { id: 'g_laser', name: 'Laser Eyes', url: '/images/glasses/g_laser.png' },
+        { id: 'g_whiteoval', name: 'White Oval', url: '/images/glasses/g_whiteoval.png' },
+        { id: 'g_visor', name: 'Cyber Visor', url: '/images/glasses/g_visor.png' },
+        { id: 'g_wayfarers', name: 'Wayfarers', url: '/images/glasses/g_wayfarers.png' },
+        { id: 'g_wire', name: 'Wire Frames', url: '/images/glasses/g_wire.png' },
+        { id: 'g_maybach', name: 'Maybach', url: '/images/glasses/g_maybach.png' },
+        { id: 'g_lv', name: 'LV Shades', url: '/images/glasses/g_lv.png' },
+        { id: 'g_cyberpunk', name: 'Cyberpunk', url: '/images/glasses/g_cyberpunk.png' },
+        { id: 'g_goggles', name: 'Tactical Goggles', url: '/images/glasses/g_goggles.png' },
+        { id: 'g_moggles', name: 'Pit Vipers Orange', url: '/images/glasses/g_moggles.png' },
+        { id: 'g_speed', name: 'Speed Shades', url: '/images/glasses/g_speed.png' },
+        { id: 'g_pitvipers', name: 'Pit Vipers Blue', url: '/images/glasses/g_pitvipers.png' },
     ],
-    Clothing: [
+Clothing: [
         { id: 'c_none', name: 'None', url: '' },
-        { id: 'c_camo', name: 'Camo Uniform', url: '/assets/c_camo.png' },
-        { id: 'c_camo_vest', name: 'Camo Vest', url: '/assets/c_camo_vest.png' },
-        { id: 'c_parka', name: 'Fur Parka', url: '/assets/c_parka.png' },
-        { id: 'c_puffer', name: 'Puffer Jacket', url: '/assets/c_puffer.png' },
-        { id: 'c_robe', name: 'Royal Robe', url: '/assets/c_robe.png' },
-        { id: 'c_polo', name: 'White Polo', url: '/assets/c_polo.png' },
-        { id: 'c_polo_black', name: 'Black Polo', url: '/assets/c_polo_black.png' },
-        { id: 'c_polo_gucci', name: 'Gucci Polo', url: '/assets/c_polo_gucci.png' },
-        { id: 'c_camo_hoodie', name: 'Camo Hoodie', url: '/assets/c_camo_hoodie.png' },
-        { id: 'c_jersey_lakers', name: 'Lakers Jersey', url: '/assets/c_jersey_lakers.png' },
-        { id: 'c_jersey_heat', name: 'Heat Jersey', url: '/assets/c_jersey_heat.png' },
-        { id: 'c_jersey_bulls', name: 'Bulls Jersey', url: '/assets/c_jersey_bulls.png' },
-        { id: 'c_armor', name: 'Knight Armor', url: '/assets/c_armor.png' },
-        { id: 'c_psg', name: 'PSG Jersey', url: '/assets/c_psg.png' },
-        { id: 'c_bandolier', name: 'PSG Jersey', url: '/assets/c_bandolier.png' },
+        { id: 'c_jersey_heat', name: 'Heat Jersey', url: '/images/clothing/c_jersey_heat.png' },
+        { id: 'c_jersey_lakers', name: 'Lakers Jersey', url: '/images/clothing/c_jersey_lakers.png' },
+        { id: 'c_jersey_bulls', name: 'Bulls Jersey', url: '/images/clothing/c_jersey_bulls.png' },
+        { id: 'c_polo_gucci', name: 'Gucci Polo', url: '/images/clothing/c_polo_gucci.png' },
+        { id: 'c_parka', name: 'Soviet Parka', url: '/images/clothing/c_parka.png' },
+        { id: 'c_camo', name: 'Camo Uniform', url: '/images/clothing/c_camo.png' },
+        { id: 'c_nike', name: 'Nike Pullover', url: '/images/clothing/c_nike.png' },
+        { id: 'c_camo_vest', name: 'Tactical Vest', url: '/images/clothing/c_camo_vest.png' },
+        { id: 'c_polo_black', name: 'Black Polo', url: '/images/clothing/c_polo_black.png' },
+        { id: 'c_robe', name: 'Royal Robe', url: '/images/clothing/c_robe.png' },
+        { id: 'c_polo', name: 'Moncler Polo', url: '/images/clothing/c_polo.png' },
+        { id: 'c_bandolier', name: 'Bandolier', url: '/images/clothing/c_bandolier.png' },
+        { id: 'c_armor', name: 'Knight Armor', url: '/images/clothing/c_armor.png' },
+        { id: 'c_psg', name: 'PSG Jersey', url: '/images/clothing/c_psg.png' },
+        { id: 'c_hoodie', name: 'Black Hoodie', url: '/images/clothing/c_hoodie.png' },
+        { id: 'c_camo_hoodie', name: 'Camo Hoodie', url: '/images/clothing/c_camo_hoodie.png' },
+        { id: 'c_puffer', name: 'Puffer Vest', url: '/images/clothing/c_puffer.png' },
     ],
-    Accessories: [
+Accessories: [
         { id: 'a_none', name: 'None', url: '' },
-        { id: 'a_ak47', name: 'Assault Rifle', url: '/assets/a_ak47.png' },
-        { id: 'a_dual_pistols', name: 'Dual Pistols', url: '/assets/a_dual_pistols.png' },
-        { id: 'a_watch_gold', name: 'Jacob & Co Tourbillon', url: '/assets/a_watch_gold.png' },
-        { id: 'a_watch_silver', name: 'Iced Out Patek', url: '/assets/a_watch_silver.png' },
-        { id: 'a_watch_rainbow', name: 'Colored Diamond Patek', url: '/assets/a_watch_rainbow.png' },
-        { id: 'a_watch_digital', name: 'Diamond G Shock', url: '/assets/a_watch_digital.png' },
-        { id: 'a_watch_emerald', name: 'Rainbow Rolex', url: '/assets/a_watch_emerald.png' },
-        { id: 'a_katana', name: 'Katana', url: '/assets/a_katana.png' },
-        { id: 'a_mustache', name: 'Mustache', url: '/assets/a_mustache.png' },
-        { id: 'a_mace', name: 'Mace', url: '/assets/a_mace.png' },
-        { id: 'a_flail', name: 'Flail', url: '/assets/a_flail.png' },
-        { id: 'a_nunchucks', name: 'Nunchucks', url: '/assets/a_nunchucks.png' },
-        { id: 'a_shuriken', name: 'Shuriken', url: '/assets/a_shuriken.png' },
-        { id: 'a_chopsticks', name: 'Chopsticks', url: '/assets/a_chopsticks.png' },
-        { id: 'a_cigar', name: 'Cuban Cigar', url: '/assets/a_cigar.png' },
-        { id: 'a_cigarette', name: 'Cigarette', url: '/assets/a_cigarette.png' },
-        { id: 'a_sniper', name: 'Desert Sniper', url: '/assets/a_sniper.png' },
-        { id: 'a_diamondsmg', name: 'Diamond SMG', url: '/assets/a_diamondsmg.png' },
-        { id: 'a_goldsmg', name: 'Gold SMG', url: '/assets/a_goldsmg.png' },
-        { id: 'a_middlefinger', name: 'Middle Finger', url: '/assets/a_middlefinger.png' },
+        { id: 'a_chopsticks', name: 'Chopsticks', url: '/images/accessories/a_chopsticks.png' },
+        { id: 'a_goldsmg', name: 'Gold SMG', url: '/images/accessories/a_goldsmg.png' },
+        { id: 'a_middlefinger', name: 'Middle Finger', url: '/images/accessories/a_middlefinger.png' },
+        { id: 'a_mustache', name: 'Mustache', url: '/images/accessories/a_mustache.png' },
+        { id: 'a_diamondsmg', name: 'Diamond SMG', url: '/images/accessories/a_diamondsmg.png' },
+        { id: 'a_dual_pistols', name: 'Dual Pistols', url: '/images/accessories/a_dual_pistols.png' },
+        { id: 'a_cigarette', name: 'Cigarette', url: '/images/accessories/a_cigarette.png' },
+        { id: 'a_katana', name: 'Katana', url: '/images/accessories/a_katana.png' },
+        { id: 'a_ak47', name: 'AK-47', url: '/images/accessories/a_ak47.png' },
+        { id: 'a_cigar', name: 'Cuban Cigar', url: '/images/accessories/a_cigar.png' },
+        { id: 'a_flail', name: 'Flail', url: '/images/accessories/a_flail.png' },
+        { id: 'a_mace', name: 'Mace', url: '/images/accessories/a_mace.png' },
+        { id: 'a_nunchucks', name: 'Nunchucks', url: '/images/accessories/a_nunchucks.png' },
+        { id: 'a_shuriken', name: 'Shuriken', url: '/images/accessories/a_shuriken.png' },
+        { id: 'a_sniper', name: 'Barrett Sniper', url: '/images/accessories/a_sniper.png' },
+        { id: 'a_watch_rainbow', name: 'Rainbow Patek', url: '/images/accessories/a_watch_rainbow.png' },
+        { id: 'a_watch_digital', name: 'Diamond G-Shock', url: '/images/accessories/a_watch_digital.png' },
+        { id: 'a_watch_silver', name: 'Iced Patek', url: '/images/accessories/a_watch_silver.png' },
+        { id: 'a_watch_gold', name: 'Gold Tourbillon', url: '/images/accessories/a_watch_gold.png' },
+        { id: 'a_watch_emerald', name: 'Rainbow Rolex', url: '/images/accessories/a_watch_emerald.png' },
+        { id: 'a_trench_map', name: 'Trench Map', url: '/images/accessories/a_trench_map.png' },
     ]
 };
 
@@ -142,7 +147,7 @@ const PfpGenerator = () => {
         // Order matters! Background -> Base Cat -> Clothing -> Headwear -> Glasses -> Accessories (Always Front)
         const layersToDraw = [
             selections.Background?.url,
-            '/assets/base-cat.png',
+            '/images/base-cat.png',
             selections.Clothing?.url,
             selections.Headwear?.url,
             selections.Glasses?.url,
@@ -160,12 +165,10 @@ const PfpGenerator = () => {
         };
 
         try {
-            // Give it a solid background dark fill just in case they don't have a background set
-            if (!selections.Background?.url) {
-                ctx.fillStyle = '#ffffff';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-            }
-
+            // Fill with dark background first to avoid white edges on any images
+            ctx.fillStyle = '#0f172a';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
             for (const url of layersToDraw) {
                 const img = await loadImage(url);
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -208,9 +211,9 @@ const PfpGenerator = () => {
 
                 {/* Left Side: Preview Canvas */}
                 <div className="preview-container dark-card">
-                    <div className={`canvas-wrapper ${!selections.Background?.url ? 'bg-white' : ''}`}>
+                    <div className="canvas-wrapper">
                         {/* Base Layer */}
-                        <img src="/assets/base-cat.png" alt="Base Cat" className="layer-img base-layer" />
+                        <img src="/images/base-cat.png" alt="Base Cat" className="layer-img base-layer" />
 
                         {/* Accessory Layers */}
                         {/* Ensure Accessories are drawn last so they appear on very top */}
@@ -260,14 +263,16 @@ const PfpGenerator = () => {
                                 className={`item-card ${selections[activeCategory].id === item.id ? 'selected' : ''}`}
                                 onClick={() => handleSelect(activeCategory, item)}
                             >
-                                <div className={`item-thumbnail ${activeCategory === 'Background' ? 'bg-thumbnail' : ''}`}>
+<div className={`item-thumbnail ${activeCategory === 'Background' ? 'bg-thumbnail' : ''}`}>
                                     {item.url ? (
-                                        <img src={item.url} alt={item.name} />
+                                        <img src={item.url} alt="" />
                                     ) : (
                                         <div className="none-placeholder">X</div>
                                     )}
                                 </div>
-                                <span className={`item-name ${activeCategory === 'Background' ? 'bg-name' : ''}`}>{item.name}</span>
+                                {item.name !== 'None' && (
+                                    <span className={`item-name ${activeCategory === 'Background' ? 'bg-name' : ''}`}>{item.name}</span>
+                                )}
                             </button>
                         ))}
                     </div>
